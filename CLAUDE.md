@@ -395,6 +395,46 @@ curl -X POST "https://your-profile--app-name-function-name.modal.run" \
 
 ---
 
+## Ad Placement Strategy
+
+When building or renovating a content/blog site, place ads to maximise revenue and viewability without harming user experience. Poor ad placement increases bounce rate and destroys the value of the site for flipping.
+
+### The Golden Positions (highest RPM, in order)
+
+| Position | Unit Size | Why it works |
+|---|---|---|
+| Below header / above fold | 728×90 leaderboard | First thing seen — 100% viewability |
+| Sidebar top (sticky) | 300×250 rectangle | Stays in view as user scrolls — continuous impressions |
+| Mid-content (between sections) | 728×90 or 300×250 | User is engaged and reading — high CTR |
+| Sidebar second (below fold) | 300×250 rectangle | Catches users who scrolled past the first |
+| Before footer | 728×90 leaderboard | Last impression before user leaves |
+
+### Rules to Follow
+
+- **Maximum 3 ads visible at once** — more than that tanks quality scores on AdSense and Mediavine
+- **Never place an ad immediately before or after another ad** — group them only with content between them
+- **Never push the first piece of real content below the fold** with ads — Google penalises this heavily
+- **Sidebar ads must have content alongside them** — a sidebar ad with no content next to it scores poorly
+- **Always add the label** `Advertisement` or `Sponsored` above each slot — legally required in most jurisdictions and required by AdSense policy
+- **Use `min-height` on ad containers** — prevents layout shift (CLS), which hurts SEO Core Web Vitals
+
+### What to Avoid
+
+- Interstitials or pop-overs — destroys UX and gets flagged by Google Search Console
+- Ads inside the hero section — looks cheap and signals low quality to buyers
+- More than one ad in the first screen of content
+- Auto-refreshing ads — banned by most networks
+- Ads that are wider than the content column on mobile
+
+### For Website Flipping Specifically
+
+- Add **3 clearly labelled ad slots** minimum — buyers want to see the monetisation infrastructure already in place
+- Use `div` containers with a dashed border and `Advertisement — 728×90` label as placeholders — makes it easy to drop in real ad code later
+- Cluster ad slots where **dwell time is highest**: after the hero, mid-article, and in the sticky sidebar
+- A newsletter signup between ad rows breaks up the ad density and increases perceived quality
+
+---
+
 ## Website Design Recreation
 
 When the user provides a reference image (screenshot) and asks to replicate it:

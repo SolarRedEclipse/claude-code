@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woodworking Trade — Craft, Build, Create</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              50:  '#fdf8f0',
+              100: '#f7edd8',
+              200: '#edd9b0',
+              400: '#c8913a',
+              500: '#a8721f',
+              600: '#8a5c14',
+              900: '#2d1a06',
+            },
+            ink: '#1c1c1c',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans:  ['Inter', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; }
+    h1, h2, .serif { font-family: 'Playfair Display', Georgia, serif; }
+    .ad-slot {
+      background: repeating-linear-gradient(
+        45deg, #f9f9f9, #f9f9f9 10px, #f3f3f3 10px, #f3f3f3 20px
+      );
+      border: 1px dashed #ccc;
+    }
+    .card:hover .card-img { transform: scale(1.04); }
+    .card-img { transition: transform 0.35s ease; }
+    .tag { transition: background 0.15s; }
+  </style>
+</head>
+<body class="bg-wood-50 text-ink">
+
+  <!-- ── Top bar ── -->
+  <div class="bg-wood-900 text-wood-200 text-xs text-center py-1.5 tracking-widest uppercase font-sans">
+    The independent resource for woodworkers &nbsp;·&nbsp; Tips, Tools & Techniques
+  </div>
+
+  <!-- ── Header ── -->
+  <header class="bg-white border-b border-wood-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
+      <div class="flex items-center gap-3">
+        <svg class="w-7 h-7 text-wood-500" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h2v18H3V3zm4 4h2v14H7V7zm4-2h2v16h-2V5zm4 3h2v13h-2V8zm4-3h2v16h-2V5z"/></svg>
+        <span class="font-serif text-xl font-bold text-ink tracking-tight">Woodworking Trade</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="#" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-wood-600 rounded hover:bg-wood-50 transition">Home</a>
+        <a href="#" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-wood-600 rounded hover:bg-wood-50 transition">Tools</a>
+        <a href="#" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-wood-600 rounded hover:bg-wood-50 transition">Finishes</a>
+        <a href="#" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-wood-600 rounded hover:bg-wood-50 transition">Projects</a>
+        <a href="#" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-wood-600 rounded hover:bg-wood-50 transition">Tips</a>
+        <a href="#" class="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-wood-600 rounded hover:bg-wood-50 transition">About</a>
+        <a href="#" class="ml-3 px-4 py-1.5 text-sm font-semibold text-white bg-wood-500 hover:bg-wood-600 rounded-full transition">Subscribe</a>
+      </nav>
+      <!-- Mobile hamburger (visual only) -->
+      <button class="md:hidden p-2 text-gray-600">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Hero (featured article) ── -->
+  <section class="bg-white border-b border-wood-100">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="inline-block bg-wood-500 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Featured</span>
+        <h1 class="font-serif text-3xl md:text-4xl font-bold leading-tight text-ink mb-4">
+          How to Stain Pine Wood: Quick Answer in 30 Seconds or Less
+        </h1>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+          One of the most versatile and easy-to-work-with woods is pine. It's used in tables, cabinets, desks, flooring, and cabins. But staining pine can be tricky without the right prep. We break it down step by step.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="inline-flex items-center gap-2 bg-wood-500 hover:bg-wood-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">
+            Read Article
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <span class="text-xs text-gray-400">&#10022; 6 min read</span>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-md">
+        <img src="https://picsum.photos/seed/pinewood/640/400" alt="How to stain pine wood" class="w-full h-64 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Ad banner (leaderboard slot) ── -->
+  <div class="max-w-6xl mx-auto px-4 py-4">
+    <div class="ad-slot rounded-lg h-20 flex items-center justify-center text-xs text-gray-400 font-sans tracking-widest uppercase">
+      Advertisement — 728×90
+    </div>
+  </div>
+
+  <!-- ── Category pills ── -->
+  <div class="max-w-6xl mx-auto px-4 pb-4 flex flex-wrap gap-2">
+    <span class="text-xs font-semibold text-gray-500 uppercase tracking-widest self-center mr-1">Browse:</span>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-wood-900 text-white rounded-full hover:bg-wood-600 transition">All</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Wood Species</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Finishing</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Hand Tools</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Power Tools</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Joinery</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Projects</a>
+    <a href="#" class="tag px-3 py-1 text-xs font-medium bg-white border border-wood-200 text-wood-600 rounded-full hover:bg-wood-100 transition">Outdoor</a>
+  </div>
+
+  <!-- ── Main content + Sidebar ── -->
+  <div class="max-w-6xl mx-auto px-4 pb-16 grid lg:grid-cols-3 gap-8">
+
+    <!-- Article grid (2 cols) -->
+    <div class="lg:col-span-2">
+
+      <h2 class="font-serif text-xl font-bold text-ink mb-5 pb-3 border-b-2 border-wood-500 inline-block pr-6">Latest Articles</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 mb-8">
+
+        <!-- Card -->
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/cherrywood/400/220" alt="Cherry vs Beech" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-wood-500 bg-wood-50 px-2 py-0.5 rounded-full">Wood Species</span>
+              <span class="text-[11px] text-gray-400">5 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Cherry vs Beech: Selecting the Ideal Wood for Your Project</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Cherry and beech wood both offer distinct advantages. Cherry is known for its fine grain and rich reddish-brown color — a popular choice for high-quality furniture.</p>
+          </div>
+        </article>
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/woodworktools/400/220" alt="Mortiser vs Drill Press" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">Power Tools</span>
+              <span class="text-[11px] text-gray-400">7 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Dedicated Mortiser vs Drill Press: Which One is Better?</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">The mortise and tenon joint is one of the most commonly used in woodworking. But which tool makes it easiest and most precise?</p>
+          </div>
+        </article>
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/outdoorfurniture/400/220" alt="Outdoor Finishes" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-green-700 bg-green-50 px-2 py-0.5 rounded-full">Finishing</span>
+              <span class="text-[11px] text-gray-400">8 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Best Wood Finishes for Outdoor Furniture</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Choosing the right outdoor wood finish is crucial. It must enhance natural beauty while protecting against moisture, UV rays, and temperature swings.</p>
+          </div>
+        </article>
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/woodworkshop/400/220" alt="Wood Glue FAQs" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">Beginner</span>
+              <span class="text-[11px] text-gray-400">4 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Wood Glue Beginner FAQs</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Getting started in woodworking? The types of wood glue available can be confusing. We answer the most common beginner questions.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── Mid-content ad slot ── -->
+      <div class="ad-slot rounded-lg h-24 flex items-center justify-center text-xs text-gray-400 font-sans tracking-widest uppercase mb-8">
+        Advertisement — 728×90
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6 mb-8">
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/oakgrain/400/220" alt="Red vs White Oak" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-wood-500 bg-wood-50 px-2 py-0.5 rounded-full">Wood Species</span>
+              <span class="text-[11px] text-gray-400">6 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Red vs White Oak</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Both are dominant hardwoods in American woodworking, but they differ widely in grain, porosity, and best use cases. Here's how to choose.</p>
+          </div>
+        </article>
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/timberplank/400/220" alt="Pressure Treated Wood" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-green-700 bg-green-50 px-2 py-0.5 rounded-full">Outdoor</span>
+              <span class="text-[11px] text-gray-400">5 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Alternatives to Pressure-treated Wood</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Pressure-treated wood is durable, but it's not the only option. Explore alternatives that offer natural resistance without chemical treatment.</p>
+          </div>
+        </article>
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/rosewood/400/220" alt="Rosewood vs Walnut" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-wood-500 bg-wood-50 px-2 py-0.5 rounded-full">Wood Species</span>
+              <span class="text-[11px] text-gray-400">6 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Rosewood vs Walnut</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Both are prized for their beauty and grain patterns. But rosewood and walnut differ in availability, cost, and workability in meaningful ways.</p>
+          </div>
+        </article>
+
+        <article class="card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="overflow-hidden">
+            <img src="https://picsum.photos/seed/darkwood/400/220" alt="Walnut vs Ebony" class="card-img w-full h-40 object-cover">
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-wood-500 bg-wood-50 px-2 py-0.5 rounded-full">Wood Species</span>
+              <span class="text-[11px] text-gray-400">5 min read</span>
+            </div>
+            <h3 class="font-serif font-bold text-base leading-snug mb-2"><a href="#" class="text-ink hover:text-wood-600 transition">Walnut vs Ebony</a></h3>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-3">Ebony's near-black color and walnut's deep brown tones both create stunning finished pieces. Which is worth the investment for your project?</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── Newsletter CTA ── -->
+      <div class="bg-wood-900 rounded-2xl p-8 text-center text-white mb-8">
+        <svg class="w-8 h-8 text-wood-400 mx-auto mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <h3 class="font-serif text-2xl font-bold mb-2">Get Weekly Woodworking Tips</h3>
+        <p class="text-wood-200 text-sm mb-5 max-w-sm mx-auto">Join 12,000+ woodworkers who get our best tutorials, tool reviews, and project ideas every week.</p>
+        <div class="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto">
+          <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-2.5 rounded-full text-sm text-ink outline-none focus:ring-2 focus:ring-wood-400">
+          <button class="px-5 py-2.5 bg-wood-500 hover:bg-wood-400 text-white text-sm font-semibold rounded-full transition whitespace-nowrap">Subscribe Free</button>
+        </div>
+        <p class="text-wood-400 text-[11px] mt-3">No spam. Unsubscribe anytime.</p>
+      </div>
+
+    </div>
+
+    <!-- ── Sidebar ── -->
+    <aside class="space-y-6">
+
+      <!-- Search -->
+      <div class="bg-white rounded-xl shadow-sm p-4">
+        <h3 class="font-serif font-bold text-sm text-ink mb-3">Search Articles</h3>
+        <div class="flex border border-gray-200 rounded-full overflow-hidden">
+          <input type="text" placeholder="e.g. pine staining..." class="flex-1 px-3 py-2 text-sm outline-none bg-transparent">
+          <button class="px-3 bg-wood-500 text-white hover:bg-wood-600 transition text-sm rounded-r-full">&#128269;</button>
+        </div>
+      </div>
+
+      <!-- Ad slot (sidebar rectangle) -->
+      <div class="ad-slot rounded-xl h-60 flex items-center justify-center text-xs text-gray-400 font-sans tracking-widest uppercase">
+        Advertisement<br>300×250
+      </div>
+
+      <!-- Popular posts -->
+      <div class="bg-white rounded-xl shadow-sm p-4">
+        <h3 class="font-serif font-bold text-sm text-ink mb-4 pb-2 border-b border-gray-100">Popular This Week</h3>
+        <div class="space-y-4">
+
+          <div class="flex gap-3 items-start">
+            <span class="text-2xl font-serif font-bold text-wood-200 leading-none w-6 flex-shrink-0">1</span>
+            <div>
+              <img src="https://picsum.photos/seed/pinewood/80/56" alt="" class="w-20 h-14 object-cover rounded-lg mb-1.5">
+              <a href="#" class="text-xs font-medium text-ink hover:text-wood-600 leading-snug block transition">How to Stain Pine Wood: Quick Answer in 30 Seconds</a>
+            </div>
+          </div>
+
+          <div class="flex gap-3 items-start">
+            <span class="text-2xl font-serif font-bold text-wood-200 leading-none w-6 flex-shrink-0">2</span>
+            <div>
+              <img src="https://picsum.photos/seed/woodworktools/80/56" alt="" class="w-20 h-14 object-cover rounded-lg mb-1.5">
+              <a href="#" class="text-xs font-medium text-ink hover:text-wood-600 leading-snug block transition">Dedicated Mortiser vs Drill Press</a>
+            </div>
+          </div>
+
+          <div class="flex gap-3 items-start">
+            <span class="text-2xl font-serif font-bold text-wood-200 leading-none w-6 flex-shrink-0">3</span>
+            <div>
+              <img src="https://picsum.photos/seed/oakgrain/80/56" alt="" class="w-20 h-14 object-cover rounded-lg mb-1.5">
+              <a href="#" class="text-xs font-medium text-ink hover:text-wood-600 leading-snug block transition">Red vs White Oak: The Full Comparison</a>
+            </div>
+          </div>
+
+          <div class="flex gap-3 items-start">
+            <span class="text-2xl font-serif font-bold text-wood-200 leading-none w-6 flex-shrink-0">4</span>
+            <div>
+              <img src="https://picsum.photos/seed/outdoorfurniture/80/56" alt="" class="w-20 h-14 object-cover rounded-lg mb-1.5">
+              <a href="#" class="text-xs font-medium text-ink hover:text-wood-600 leading-snug block transition">Best Wood Finishes for Outdoor Furniture</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="bg-white rounded-xl shadow-sm p-4">
+        <h3 class="font-serif font-bold text-sm text-ink mb-3 pb-2 border-b border-gray-100">Categories</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Wood Species</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">24</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Finishing & Staining</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">18</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Power Tools</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">15</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Hand Tools</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">11</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Joinery</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">9</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Projects & Builds</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">21</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#" class="text-sm text-gray-600 hover:text-wood-600 transition">Beginner Guides</a>
+            <span class="text-xs bg-wood-100 text-wood-600 px-2 py-0.5 rounded-full font-medium">13</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Second ad slot -->
+      <div class="ad-slot rounded-xl h-60 flex items-center justify-center text-xs text-gray-400 font-sans tracking-widest uppercase">
+        Advertisement<br>300×250
+      </div>
+
+      <!-- Quick tip card -->
+      <div class="bg-wood-100 border border-wood-200 rounded-xl p-4">
+        <span class="text-[10px] font-semibold uppercase tracking-widest text-wood-500">Quick Tip</span>
+        <p class="font-serif font-bold text-sm text-ink mt-1 mb-2">Always sand with the grain, never against it.</p>
+        <p class="text-xs text-gray-500 leading-relaxed">Cross-grain scratches are nearly impossible to remove once a finish is applied. Work through grits progressively: 80 → 120 → 180 → 220.</p>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="bg-wood-900 text-wood-200">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+      <div>
+        <div class="font-serif font-bold text-white text-lg mb-2">Woodworking Trade</div>
+        <p class="text-wood-400 text-xs leading-relaxed">The independent resource for woodworkers at every skill level. Craft, build, create.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-white mb-3">Quick Links</div>
+        <ul class="space-y-1.5 text-xs text-wood-400">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" class="hover:text-white transition">Tools & Reviews</a></li>
+          <li><a href="#" class="hover:text-white transition">Finishing Guides</a></li>
+          <li><a href="#" class="hover:text-white transition">Wood Species</a></li>
+          <li><a href="#" class="hover:text-white transition">Beginner Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold text-white mb-3">Company</div>
+        <ul class="space-y-1.5 text-xs text-wood-400">
+          <li><a href="#" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition">Advertise</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-wood-800 text-center py-4 text-xs text-wood-500">
+      © 2026 Woodworking Trade. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
