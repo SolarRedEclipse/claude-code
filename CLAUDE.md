@@ -395,11 +395,45 @@ curl -X POST "https://your-profile--app-name-function-name.modal.run" \
 
 ---
 
+## Website Design Recreation
+
+When the user provides a reference image (screenshot) and asks to replicate it:
+
+### Workflow
+
+1. **Generate** a single HTML file using Tailwind CSS via CDN. Include all content inline — no external files unless requested.
+2. **Screenshot** the rendered page using Puppeteer or `open` + browser screenshot.
+3. **Compare** the screenshot against the reference image. Check for mismatches in:
+   - Spacing and padding
+   - Font sizes, weights, and line heights
+   - Colors (exact hex values)
+   - Alignment and positioning
+   - Border radii, shadows, and effects
+   - Image/icon sizing and placement
+4. **Fix** every mismatch found and re-screenshot.
+5. **Repeat** until no visible differences remain — always do at least 2 comparison rounds.
+
+### Technical Defaults
+
+- Use Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
+- Use placeholder images from `https://placehold.co/` when source images are not provided
+- Single `index.html` file unless the user requests otherwise
+
+### Rules
+
+- Do not add features, sections, or content not in the reference image
+- Match the reference exactly — do not "improve" or "enhance" the design
+- If the user provides CSS classes or style tokens, use them verbatim
+- When reporting mismatches be specific: "heading is 32px but reference shows ~24px"
+- Tailwind via CDN is allowed for recreation tasks — the "no frameworks" rule applies to the web app project only
+
+---
+
 ## What Claude Should Never Do
 
 - **Do not introduce a build system** (Webpack, Vite, Parcel, etc.) for the web app unless explicitly asked
 - **Do not add npm / package.json** for the web app unless explicitly asked
-- **Do not add CSS or JS frameworks** (Bootstrap, Tailwind, React, Vue, etc.) unless explicitly asked
+- **Do not add CSS or JS frameworks** (Bootstrap, Tailwind, React, Vue, etc.) to the web app project unless explicitly asked — Tailwind via CDN is permitted for design recreation tasks only
 - **Do not deploy a Modal endpoint without Bearer token auth** — no exceptions
 - **Do not use raw `dict` for Modal endpoint inputs** — always use Pydantic models
 - **Do not add comments** that merely restate what the code does — only comment on *why* when genuinely non-obvious
